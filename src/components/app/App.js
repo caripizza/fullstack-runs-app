@@ -4,14 +4,16 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import Home from '../../pages/Home';
+import AllDogsContainer from '../../containers/dogs/AllDogs';
+import DogDetails from '../../containers/dogs/DogDetails';
 
 export default function App() {
   return (
     <Router>
       <>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={AllDogsContainer} />
+          <Route exact path="/dogs/:id" component={DogDetails} />
         </Switch>
       </>
     </Router>
